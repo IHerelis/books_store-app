@@ -1,0 +1,90 @@
+.book-card {
+  max-width: 270px;
+  border: 1.5px solid grey;
+  box-shadow: 0px 0px 5px 1px grey;
+  padding: 10px;
+  transition: 0.45s ease;
+}
+
+.book-card:hover {
+  /* box-shadow: 0px -2px 5px 3px rgb(2, 159, 2); */
+  box-shadow: 0px 3px 8px 3px grey;
+  transform: translateY(-5px);
+}
+
+.book-card__img {
+  /* max-width: 50px;
+  max-height: 50px; */
+  border: 2px solid rgba(0, 0, 0, 0.630);
+  border-radius: 5px;
+  aspect-ratio: 1/1.2;
+  position: relative;
+}
+
+.book-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.wish-btn__baner {
+  border-radius: 50%;
+  position: absolute;
+  /* top: 8px; */
+  bottom: -16px;
+  right: 8px;
+}
+
+
+.book-card__body {
+  padding-block: 10px;
+}
+
+.card__body__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card__body__autor {
+  font-size: 18px;
+}
+
+.book-card__sell {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-block: 10px;
+  padding-inline: 15px;
+}
+
+.card__sell__price {
+  padding-inline: 10px;
+  color: red;
+}
+
+.card__sell__cart {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 1px 5px 2px rgb(79, 198, 79);
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.card__sell__cart:hover {
+  box-shadow: 0px -2px 5px 2px  rgb(79, 198, 79);
+  transform: scale(1.025);
+}
+
+.card__sell__cart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* vertical-align: top; */
+}
+

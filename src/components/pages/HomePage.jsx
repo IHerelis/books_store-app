@@ -2,6 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import CreateBook from '../CreateBook';
 import { useSelector } from 'react-redux';
+import BooksBoard from '../BooksBoard';
 
 const HomePage = () => {
 
@@ -15,16 +16,7 @@ const HomePage = () => {
 
         <CreateBook />
 
-        <div>
-          <h2>Book List</h2>
-          {
-            books.map((book) => (
-              <div key={book._id}>
-                {book.autor}, {book.title}, {book.description}
-              </div>
-            ))
-          }
-        </div>
+        <BooksBoard books={books} />
       </div>
     </div>
   );

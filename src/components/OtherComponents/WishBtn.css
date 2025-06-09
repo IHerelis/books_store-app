@@ -1,0 +1,26 @@
+.product-wish__wrapper {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 1px 5px 2px rgb(79, 198, 79);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.product-wish__wrapper:hover {
+  box-shadow: 0px -1px 5px 2px  rgb(79, 198, 79);
+  transform: scale(1.03);
+}
+
+.product-wish {
+  max-width: fit-content;
+  padding: 3px;
+  color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
