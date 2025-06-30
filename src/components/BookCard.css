@@ -1,5 +1,5 @@
 .book-card {
-  max-width: 270px;
+  /* max-width: 270px; */
   border: 1.5px solid grey;
   box-shadow: 0px 0px 5px 1px grey;
   padding: 10px;
@@ -13,8 +13,6 @@
 }
 
 .book-card__img {
-  /* max-width: 50px;
-  max-height: 50px; */
   border: 2px solid rgba(0, 0, 0, 0.630);
   border-radius: 5px;
   aspect-ratio: 1/1.2;
@@ -31,8 +29,14 @@
 .wish-btn__baner {
   border-radius: 50%;
   position: absolute;
-  /* top: 8px; */
   bottom: -16px;
+  right: 8px;
+}
+
+.option-btn__baner {
+  /* border-radius: 50%; */
+  position: absolute;
+  top: 8px;
   right: 8px;
 }
 
@@ -61,6 +65,8 @@
 .card__sell__price {
   padding-inline: 10px;
   color: red;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .card__sell__cart {

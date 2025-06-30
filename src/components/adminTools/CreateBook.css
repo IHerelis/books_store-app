@@ -1,0 +1,65 @@
+.create-book__container {
+  padding-inline: 20px;
+  padding-block: 30px;
+}
+
+.create-book__title {
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+
+/* ==== Form ===== */
+
+.book-form {
+  padding: 12px;
+  border: 2px solid brown;
+}
+
+.book-form__field {
+  padding-block: 5px;
+}
+
+.book-form__field label {
+  padding-inline: 5px 10px;
+  padding-block: 5px;
+}
+
+.book-form__field input {
+  padding: 3px 5px;
+  /* min-width: 45%; */
+}
+
+.book-form__field textarea {
+  padding: 3px 5px;
+  width: 90%;
+  min-height: 55px;
+}
+
+.book-form-error {
+  color: red;
+  padding-bottom: 10px;
+}
+
+.book-form__add {
+  padding: 12px;
+}
+
+.btn__submit {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(43, 166, 43);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  min-width: 250px;
+  font-size: 18px;
+}
+
+.btn__submit:hover {
+  background-color: rgb(34, 127, 34);
+}

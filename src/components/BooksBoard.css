@@ -4,8 +4,8 @@
 }
 
 .books-board {
-  padding-block: 10px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 270px));
   gap: 20px;
   justify-content: center;
 }

@@ -1,3 +1,12 @@
 .home-page__container {
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
+  padding-bottom: 1rem;
+}
+
+
+.home-page__slider {
+  /* max-width: 60%; */
+  max-width: 700px;
+  padding: 20px;
+  margin-left: auto;
 }

@@ -7,7 +7,7 @@ const BooksBoard = ({books}) => {
 
   return (
     <div className='books-board__container'>
-      <h2>Book List</h2>
+      {/* <h2>Book List</h2> */}
       <div className='books-board'>
         {books.map((book) => (
           <BookCard key={book._id} book={book} />

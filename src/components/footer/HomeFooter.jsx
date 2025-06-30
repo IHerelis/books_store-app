@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomeFooter.css';
-
 import { Link } from 'react-router-dom';
+
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -11,7 +11,7 @@ const HomeFooter = () => {
   return (
     <div className='home-footer__container'>
       <div className='footer-logo'>
-          <h1>Book Store</h1>
+          <Link to="/">Book Store</Link>
       </div>
       <div className='footer-socials'>
         <div className='footer-socials__icons'>
