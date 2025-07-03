@@ -13,7 +13,7 @@ const BookCard = ({book}) => {
     <div className='book-card'>
       <div className='book-card__img'>
         <div className='option-btn__baner'>
-          <MoreOptions/>
+          <MoreOptions product={book} />
         </div>
         <img src={`${http.getUri()}/uploads/${book.image}`} alt='book__image'/>
         <div className='wish-btn__baner'>

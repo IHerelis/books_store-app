@@ -19,11 +19,11 @@ export const createBook = createAsyncThunk('books.create', async (payload) => {
 });
 
 export const updateBook = createAsyncThunk('books.update', async (payload) => {
-  const response = await http.put(`/books/${payload.id}`, payload);
+  const response = await http.put(`/books/${payload._id}`, payload);
   return response.data;
 });
 
 export const deleteBook = createAsyncThunk('books.delete', async (payload) => {
-  const response = await http.delete(`/books/${payload.id}`, payload);
+  const response = await http.delete(`/books/${payload._id}`, payload);
   return response.data;
 });

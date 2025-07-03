@@ -2,16 +2,25 @@ import { IconButton, Menu, MenuItem } from '@mui/material';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import React from 'react';
 import './MoreOptions.css';
+import { useDispatch } from 'react-redux';
+import { deleteBook } from '../../thunks/booksThunks';
 
 
 
-const MoreOptions = () => {
+const MoreOptions = ({product}) => {
+
+  const dispatch = useDispatch();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleDelete = () => {
     handleClose();
+    const userSure = confirm("Confirm deletion");
 
+    if (userSure) {
+      dispatch(deleteBook(product));
+      console.log("product", product);
+    }
   };
 
   const handleUpdate = () => {
