@@ -1,4 +1,4 @@
-import { IconButton, Menu, MenuItem } from '@mui/material';
+import { ClickAwayListener, Grow, IconButton, MenuItem, MenuList, Paper, Popper } from '@mui/material';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import React from 'react';
 import './MoreOptions.css';
@@ -11,7 +11,21 @@ const MoreOptions = ({product}) => {
 
   const dispatch = useDispatch();
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
+
+  const handleMenu = (event) => {
+    setOpen((open) => !open);
+  };
+
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+
+    setOpen(false);
+  };
+
 
   const handleDelete = () => {
     handleClose();
@@ -28,47 +42,55 @@ const MoreOptions = ({product}) => {
 
   };
 
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
 
   return (
     <div className='product-options__wrapper'>
       <div className='product-options'>
         <IconButton
-          size="large"
-          aria-label="display more actions"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
           onClick={handleMenu}
+          size="large"
           color="inherit"
+          ref={anchorRef}
+          id="more-actions-button"
+          aria-label="display more actions"
+          aria-controls={open ? 'more-actions-menu' : undefined}
+          aria-expanded={open ? 'true' : undefined}
+          aria-haspopup="true"
         >
           <MoreIcon />
         </IconButton>
-        <Menu
-          id="menu-appbar"
-          anchorEl={anchorEl}
-          anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          keepMounted
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
+        <Popper
+          open={open}
+          anchorEl={anchorRef.current}
+          role={undefined}
+          placement="bottom-end"
+          transition
+          disablePortal
         >
-          <MenuItem onClick={handleDelete}>Delete</MenuItem>
-          <MenuItem onClick={handleUpdate}>Update</MenuItem>
-          <MenuItem onClick={handleClose}>Cancel</MenuItem>
-        </Menu>
+          {({ TransitionProps, placement }) => (
+            <Grow
+              {...TransitionProps}
+              style={{
+                transformOrigin:
+                  placement === 'bottom-end' ? 'left top' : 'left bottom',
+              }}
+            >
+              <Paper>
+                <ClickAwayListener onClickAway={handleClose}>
+                  <MenuList
+                    autoFocusItem={open}
+                    id="more-actions-menu"
+                    aria-labelledby="more-actions-button"
+                  >
+                    <MenuItem onClick={handleDelete}>Delete</MenuItem>
+                    <MenuItem onClick={handleUpdate}>Update</MenuItem>
+                    {/* <MenuItem onClick={handleClose}>Cancel</MenuItem> */}
+                  </MenuList>
+                </ClickAwayListener>
+              </Paper>
+            </Grow>
+          )}
+        </Popper>
       </div>
     </div>
   );
