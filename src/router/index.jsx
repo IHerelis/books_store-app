@@ -3,6 +3,7 @@ import App from "../App";
 import HomePage from "../components/pages/HomePage";
 import AdminPage from "../components/pages/AdminPage";
 import CreateBook from "../components/adminTools/CreateBook";
+import BookPage from "../components/pages/BookPage";
 
 export const router = createBrowserRouter ([
   {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter ([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: '/bookPage',
+        element: <BookPage />
       },
       {
         path: '/adminPage',

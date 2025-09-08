@@ -27,8 +27,8 @@ const MoreOptions = ({product}) => {
   };
 
 
-  const handleDelete = () => {
-    handleClose();
+  const handleDelete = (e) => {
+    handleClose(e);
     const userSure = confirm("Confirm deletion");
 
     if (userSure) {
@@ -37,8 +37,8 @@ const MoreOptions = ({product}) => {
     }
   };
 
-  const handleUpdate = () => {
-    handleClose();
+  const handleUpdate = (e) => {
+    handleClose(e);
 
   };
 

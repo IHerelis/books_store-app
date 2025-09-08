@@ -15,7 +15,7 @@ const booksSliderList = [bookFoto1, bookFoto2, bookFoto3];
 
 const HomePage = () => {
 
-  const {data: books} = useSelector(state => state.books);
+  const {booksList: books} = useSelector(state => state.books);
 
 
   return (

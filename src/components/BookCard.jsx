@@ -4,9 +4,18 @@ import { http } from '../app/http';
 import CartGreen from '../assets/cart-green_32-32.png';
 import WishBtn from './OtherComponents/WishBtn';
 import MoreOptions from './OtherComponents/MoreOptions';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addBookReview } from '../slices/booksSlice';
 
 
 const BookCard = ({book}) => {
+
+  const dispatch = useDispatch();
+
+  const reviewHandler = () => {
+    dispatch(addBookReview(book));
+  }
 
   
   return (
@@ -21,7 +30,12 @@ const BookCard = ({book}) => {
         </div>
       </div>
       <div className='book-card__body'>
-        <div className='card__body__title'>{book.title}</div>
+        <Link to="/bookPage" 
+          title={book.title}
+          onClick={reviewHandler}
+        >
+          <div className='card__body__title'>{book.title}</div>
+        </Link>
         <div className='card__body__autor'>{book.autor}</div>
       </div>
       <div className='book-card__sell'>
