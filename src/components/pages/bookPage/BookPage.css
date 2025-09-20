@@ -10,7 +10,7 @@
 
 .product-about {
   display: grid;
-  grid-template-columns: 0.8fr 1fr 400px;
+  grid-template-columns: 0.8fr 1fr 27.027027%; 
   /* grid-template-rows: auto 1fr; */
   column-gap: 16px;
   /* row-gap: 10px; */
@@ -72,9 +72,9 @@
   font-size: 18px;
 }
 
-.product__item__description {
-  /* line-height: 1.1; */
-}
+/* .product__item__description {
+ 
+} */
 
 .item__description__title {
   font-style: italic;
@@ -119,4 +119,38 @@
 
 .product-side h2 {
   font-size: 24px;
+}
+
+
+@media (max-width: 1220px) {
+  .product-about {
+    grid-template-columns: 1fr 35%; /* 400/1175 */
+    row-gap: 10px;
+    grid-template-areas: 
+      "fotoboard product-side"
+      "product__item product__item"
+      "product__review product__review"
+    ;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .product-about {
+    grid-template-columns: 1fr; /* 400/1175 */
+    grid-template-areas: 
+      "fotoboard"
+      "product-side"
+      "product__item"
+      "product__review"
+    ;
+  }
+  .book-page__container {
+    padding-block: 15px;
+  }
+ 
+}
+
+@media (max-width: 767.98px) {
+  
+ 
 }
