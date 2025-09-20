@@ -41,7 +41,7 @@ const CreateBook = () => {
 
 
   const initialValues = {
-    autor: "",
+    author: "",
     title: "",
     description: "",
     review: "",
@@ -70,7 +70,7 @@ const CreateBook = () => {
 
 
   const BookSchema = Yup.object().shape({
-    autor: Yup.string().min(3, 'Too short').required('autor is required'),
+    author: Yup.string().min(3, 'Too short').required('author is required'),
     title: Yup.string().min(3, 'Too short').required('title is required'),
     description: Yup.string().min(3, 'Too short').required('description is required'),
     review: Yup.string().min(3, 'Too short'),
@@ -99,8 +99,8 @@ const CreateBook = () => {
         { () => ( <Form>
 
               <div className='book-form__field'>
-                <label htmlFor="form__field__autor">Autor:</label>
-                <Field type='text' name='autor' id='form__field__autor' />
+                <label htmlFor="form__field__author">Author:</label>
+                <Field type='text' name='author' id='form__field__author' />
               </div>
               <ErrorMessage name="autor" component="div" className='book-form-error' />
 

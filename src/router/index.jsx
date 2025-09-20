@@ -3,7 +3,8 @@ import App from "../App";
 import HomePage from "../components/pages/HomePage";
 import AdminPage from "../components/pages/AdminPage";
 import CreateBook from "../components/adminTools/CreateBook";
-import BookPage from "../components/pages/BookPage";
+import BookPage from "../components/pages/bookPage/BookPage";
+
 
 export const router = createBrowserRouter ([
   {

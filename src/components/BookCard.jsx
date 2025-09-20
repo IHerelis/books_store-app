@@ -36,7 +36,7 @@ const BookCard = ({book}) => {
         >
           <div className='card__body__title'>{book.title}</div>
         </Link>
-        <div className='card__body__autor'>{book.autor}</div>
+        <div className='card__body__author'>{book.author}</div>
       </div>
       <div className='book-card__sell'>
         <div className='card__sell__price'>{book.price ? book.price + " грн" : "Price.)"}</div>

@@ -1,0 +1,13 @@
+.more-less-btn {
+  border: none;
+  padding: 2px 10px;
+  color: white;
+  background-color: #10877b;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+}
+
+.more-less-btn:hover {
+  background-color: #0b5e56;
+  box-shadow: 0px 1px 3px 1px grey;
+}
