@@ -10,7 +10,12 @@
 
 .footer-logo {
   min-width: fit-content;
+  transition: all 0.3s linear;
   /* border: 2px solid white; */
+}
+
+.footer-logo:hover {
+  color: yellow;
 }
 
 .footer-socials {
